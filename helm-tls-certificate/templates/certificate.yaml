@@ -10,8 +10,6 @@ spec:
     kind: {{ .Values.issuer.kind }}
   commonName: {{ .Values.certificate.commonName }}
   dnsNames:
-    {{- range .Values.certificate.dnsNames }}
-    - {{ . }}
-    {{- end }}
+    - {{ .Values.certificate.dnsName }}
   duration: {{ .Values.certificate.duration }}
   renewBefore: {{ .Values.certificate.renewBefore }}

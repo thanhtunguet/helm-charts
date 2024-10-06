@@ -1,0 +1,5 @@
+{
+    "yaml.format.enable": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false
+}
