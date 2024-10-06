@@ -2,7 +2,7 @@ issuer:
   name: "my-custom-issuer"
   namespace: "default"
   kind: "Issuer" # Can also be ClusterIssuer
-  email: "ht@thanhtunguet.info"
+  email: "email@example.com"
   privateKeySecretRef:
     name: "letsencrypt-http01-account-key"
   solvers:
