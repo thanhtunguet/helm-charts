@@ -30,11 +30,11 @@ questions:
     type: "string"
     group: "Certificate Configuration"
 
-  - variable: "certificate.dnsNames[0]"
-    default: "example.com"
+  - variable: "certificate.dnsNames"
+    default: "{example.com,www.example.com}"
     description: "DNS Names for the certificate, comma-separated"
     label: "DNS Names"
-    type: "string"
+    type: "array"
     group: "Certificate Configuration"
 
   - variable: "certificate.duration"

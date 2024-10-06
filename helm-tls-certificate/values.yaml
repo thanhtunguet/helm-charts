@@ -7,7 +7,6 @@ certificate:
   namespace: "default"
   secretName: "my-tls-secret"
   commonName: "example.com"
-  dnsNames:
-    - "example.com"
+  dnsNames: []
   duration: "2160h" # 90 days
   renewBefore: "360h" # 15 days
