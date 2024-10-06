@@ -1,4 +1,5 @@
 issuer:
+  createIssuer: true
   name: "my-custom-issuer"
   namespace: "default"
   kind: "Issuer" # Can also be ClusterIssuer

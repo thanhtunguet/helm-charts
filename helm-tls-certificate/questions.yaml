@@ -1,5 +1,11 @@
 questions:
-  
+  - variable: "issuer.createIssuer"
+    default: true
+    description: "Create the Issuer, only used when issue type is Issuer, not used when issue type is ClusterIssuer"
+    label: "Create Issuer"
+    type: "boolean"
+    group: "Issuer Configuration"
+
   - variable: "issuer.name"
     default: "my-custom-issuer"
     description: "Name of the Issuer"

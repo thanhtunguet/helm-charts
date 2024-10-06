@@ -1,3 +1,4 @@
+{{ if .Values.issuer.createIssuer }}
 apiVersion: cert-manager.io/v1
 kind: {{ .Values.issuer.kind }}
 metadata:
@@ -13,3 +14,4 @@ spec:
       - http01:
           ingress:
             class: {{ .Values.issuer.solvers.http01.ingress.class }}
+{{ end }}
