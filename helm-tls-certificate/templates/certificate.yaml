@@ -4,7 +4,7 @@ metadata:
   name: {{ .Values.certificate.name }}
   namespace: {{ .Values.certificate.namespace }}
 spec:
-  secretName: {{ .Values.certificate.secretName }}
+  secretName: {{ .Values.certificate.dnsName }}
   issuerRef:
     name: {{ .Values.issuer.name }}
     kind: {{ .Values.issuer.kind }}

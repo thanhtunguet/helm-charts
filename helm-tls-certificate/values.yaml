@@ -12,7 +12,6 @@ issuer:
 certificate:
   name: "my-certificate"
   namespace: "default"
-  secretName: "my-tls-secret"
   commonName: "example.com"
   dnsName: "example.com"
   duration: "2160h" # 90 days
