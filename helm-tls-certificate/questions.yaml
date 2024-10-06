@@ -1,4 +1,5 @@
 questions:
+  
   - variable: "issuer.name"
     default: "my-custom-issuer"
     description: "Name of the Issuer"
@@ -14,6 +15,27 @@ questions:
     options:
       - "Issuer"
       - "ClusterIssuer"
+    group: "Issuer Configuration"
+
+  - variable: "issuer.email"
+    default: "user@example.com"
+    description: "Email address for ACME registration"
+    label: "Issuer Email"
+    type: "string"
+    group: "Issuer Configuration"
+
+  - variable: "issuer.privateKeySecretRef.name"
+    default: "letsencrypt-http01-account-key"
+    description: "Name of the secret to store the ACME account private key"
+    label: "ACME Account Private Key Secret Name"
+    type: "string"
+    group: "Issuer Configuration"
+
+  - variable: "issuer.solvers.http01.ingress.class"
+    default: "traefik"
+    description: "Ingress class to use for HTTP01 challenge"
+    label: "HTTP01 Ingress Class"
+    type: "string"
     group: "Issuer Configuration"
 
   - variable: "certificate.name"

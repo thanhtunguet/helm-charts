@@ -2,6 +2,13 @@ issuer:
   name: "my-custom-issuer"
   namespace: "default"
   kind: "Issuer" # Can also be ClusterIssuer
+  email: "ht@thanhtunguet.info"
+  privateKeySecretRef:
+    name: "letsencrypt-http01-account-key"
+  solvers:
+    http01:
+      ingress:
+        class: "traefik"
 certificate:
   name: "my-certificate"
   namespace: "default"
@@ -10,3 +17,4 @@ certificate:
   dnsName: "example.com"
   duration: "2160h" # 90 days
   renewBefore: "360h" # 15 days
+

@@ -4,5 +4,12 @@ metadata:
   name: {{ .Values.issuer.name }}
   namespace: {{ .Values.issuer.namespace }}
 spec:
-  ca:
-    secretName: ca-key-pair # Adjust as per your CA
+  acme:
+    email: {{ .Values.issuer.email }}
+    privateKeySecretRef:
+      name: {{ .Values.issuer.privateKeySecretRef.name }}
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+      - http01:
+          ingress:
+            class: {{ .Values.issuer.solvers.http01.ingress.class }}
