@@ -5,7 +5,7 @@ questions:
     label: "Issuer Name"
     type: "string"
     group: "Issuer Configuration"
-  
+
   - variable: "issuer.kind"
     default: "Issuer"
     description: "Kind of Issuer (Issuer or ClusterIssuer)"
@@ -30,8 +30,8 @@ questions:
     type: "string"
     group: "Certificate Configuration"
 
-  - variable: "certificate.dnsNames"
-    default: "example.com,www.example.com"
+  - variable: "certificate.dnsNames[0]"
+    default: "example.com"
     description: "DNS Names for the certificate, comma-separated"
     label: "DNS Names"
     type: "string"
