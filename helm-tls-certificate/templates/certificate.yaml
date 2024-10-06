@@ -1,3 +1,4 @@
+{{ if .Values.certificate.createCertificate }}
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
@@ -13,3 +14,4 @@ spec:
     - {{ .Values.certificate.dnsName }}
   duration: {{ .Values.certificate.duration }}
   renewBefore: {{ .Values.certificate.renewBefore }}
+{{ end }}

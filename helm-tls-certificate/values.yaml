@@ -11,6 +11,7 @@ issuer:
       ingress:
         class: "traefik"
 certificate:
+  createCertificate: true
   name: "my-certificate"
   namespace: "default"
   commonName: "example.com"

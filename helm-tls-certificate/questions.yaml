@@ -7,7 +7,7 @@ questions:
     group: "Issuer Configuration"
 
   - variable: "issuer.name"
-    default: "my-custom-issuer"
+    default: "letsencrypt"
     description: "Name of the Issuer"
     label: "Issuer Name"
     type: "string"
@@ -43,6 +43,13 @@ questions:
     label: "HTTP01 Ingress Class"
     type: "string"
     group: "Issuer Configuration"
+
+  - variable: "certificate.createCertificate"
+    default: true
+    description: "Create the Certificate, set to false if you want to create a ClusterIssuer"
+    label: "Create Certificate"
+    type: "boolean"
+    group: "Certificate Configuration"
 
   - variable: "certificate.name"
     default: "my-certificate"
