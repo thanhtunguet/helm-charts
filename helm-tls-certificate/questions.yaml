@@ -58,6 +58,13 @@ questions:
     type: "string"
     group: "Certificate Configuration"
 
+  - variable: "namespace"
+    default: "default"
+    description: "Namespace of the Certificate"
+    label: "Certificate Namespace"
+    type: "string"
+    group: "Certificate Configuration"
+
   - variable: "certificate.commonName"
     default: "example.com"
     description: "Common Name for the certificate"

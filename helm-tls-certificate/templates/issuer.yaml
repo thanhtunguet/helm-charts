@@ -3,7 +3,7 @@ apiVersion: cert-manager.io/v1
 kind: {{ .Values.issuer.kind }}
 metadata:
   name: {{ .Values.issuer.name }}
-  namespace: {{ .Values.issuer.namespace }}
+  namespace: {{ .Values.namespace }}
 spec:
   acme:
     email: {{ .Values.issuer.email }}

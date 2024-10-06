@@ -1,7 +1,7 @@
+namespace: "default"
 issuer:
   createIssuer: true
   name: "my-custom-issuer"
-  namespace: "default"
   kind: "Issuer" # Can also be ClusterIssuer
   email: "email@example.com"
   privateKeySecretRef:
@@ -13,7 +13,6 @@ issuer:
 certificate:
   createCertificate: true
   name: "my-certificate"
-  namespace: "default"
   commonName: "example.com"
   dnsName: "example.com"
   duration: "2160h" # 90 days
